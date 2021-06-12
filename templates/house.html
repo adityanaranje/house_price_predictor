@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	
+	body {
+	background-image: url(static/image/house2.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	}
+    
+	button {
+        display: inline-block;
+        background-color: #d9d9d9;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #000000;
+        text-align: center;
+        font-size: 25px;
+        padding: 15px;
+        width: 180px;
+        transition: all 0.1s;
+        cursor: pointer;
+        margin: 7px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #404040;
+        color: #ffffff;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+	
+	
+	.label1 {
+    position: relative;
+    top: 5px;
+  	color: #e6e6e6;
+  	padding: 10px;
+  	font-family: Arial;
+	font-weight:bold;
+    font-size: 18px;
+	}
+    
+   
+    
+	input {
+      background-color: #595959;
+      border: none;
+      color: white;
+      padding: 5px 25px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+
+      select {
+    padding: 2px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #595959;
+    color: white;
+ 	 }
+
+	.head{
+	color:white;
+	font-size:50px;
+	font-weight:bold;
+	top:40px;
+	font-style:"Times New Roman";
+	}
+
+</style>
+</head>
+
+<body>
+<div>
+	<center>
+	<form action="/result" method="POST">
+	<a class="head">
+	<h5 > HOUSE PRICE PREDICTOR </h5></a>
+    <span class="label1">
+	<label for="No of Bedrooms">No of Bedrooms</label>
+	<input type="text" id="myTextBox1" name = "No of Bedrooms" required="required">
+	<br>
+
+	<label for="No of Bathrooms">No of Bathrooms</label>
+	<input type="text" id="myTextBox1" name = "No of Bathrooms" required="required">
+	<br>
+
+	<label for="Flat Area (in Sqft)">Flat Area (in Sqft)</label>
+	<input type="text" id="myTextBox1" name = "Flat Area (in Sqft)" required="required">
+	<br>
+
+	<label for="Lot Area (in Sqft)">Lot Area (in Sqft)</label>
+	<input type="text" id="myTextBox1" name = "Lot Area (in Sqft)" required="required">
+	<br>
+
+	<label for="No of Floors">No of Floors</label>
+	<input type="text" id="myTextBox1" name = "No of Floors" required="required">
+	<br>
+
+	<label for="Waterfront View" >Waterfront View</label>
+	<select id="myTextBox1" name="Waterfront View">
+	<option value="0">No</option>
+	<option value="1">Yes</option>
+	</select>
+	<br>
+	
+	<label for="No of Times Visited">No of Times Visited</label>
+	<input type="text" id="myTextBox1" name = "No of Times Visited" required="required">
+	<br>
+
+	<label for="Condition of the House">Condition of the House</label>
+	<select id="myTextBox1" name="Condition of the House">
+	<option value="0">Bad</option>
+	<option value="4">Okay</option>
+	<option value="2">Fair</option>
+	<option value="3">Good</option>
+	<option value="1">Excellent</option>
+	</select>
+	<br>
+
+	<label for="Overall Grade">Overall Grade</label>
+	<select id="myTextBox1" name="Overall Grade">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	</select>
+	<br>
+	
+	<label for="Area of the House from Basement (in Sqft)">Area of the House from Basement (in Sqft)</label>
+	<input type="text" id="myTextBox1" name = "Area of the House from Basement (in Sqft)" required="required">
+	<br>
+
+	<label for="Basement Area (in Sqft)">Basement Area (in Sqft)</label>
+	<input type="text" id="myTextBox1" name = "Basement Area (in Sqft)" required="required">
+	<br>
+
+	<label for="Age of House (in Years)">Age of House (in Years)</label>
+	<input type="text" id="myTextBox1" name = "Age of House (in Years)" required="required">
+	<br>
+
+	<label for="Living Area after Renovation (in Sqft)">Living Area after Renovation (in Sqft)</label>
+	<input type="text" id="myTextBox1" name = "Living Area after Renovation (in Sqft)" required="required">
+	<br>
+
+	<label for="Lot Area after Renovation (in Sqft)">Lot Area after Renovation (in Sqft)</label>
+	<input type="text" id="myTextBox1" name = "Lot Area after Renovation (in Sqft)" required="required">
+	<br>	
+
+	<label for="Ever Renovated">Ever Renovated</label>
+	<select id="myTextBox1" name="Ever Renovated">
+	<option value="0">No</option>
+	<option value="1">Yes</option>
+	</select>
+	<br>
+
+	<label for="Year Since Renovation">Year Since Renovation</label>
+	<input type="text" id="myTextBox1" name = "Year Since Renovation" required="required">
+	<br>		
+
+	<label for="Zipcode_tabel">Zipcode Category</label>
+	<select id="myTextBox1" name="Zipcode_tabel">
+	<option value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	</select>
+	<br>
+
+	<button>
+      	<span>PREDICT</span>
+    	</button>
+	
+	</center>
+</div>
+</body>
+</html>
